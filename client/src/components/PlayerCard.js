@@ -1,13 +1,14 @@
 //import liraries
 import React, { useState, useEffect } from 'react';
+import './playercard.css'
 
 // create a component
 const PlayerCard = (props) => {
  return (
-  <div>
-    <h1>{props.name}</h1>
-    <p>{props.searches}</p>
-    <p>{props.country}</p>
+  <div className="card">
+    <h1>Name: {props.name}</h1>
+    <p>Searches: {props.searches}</p>
+    <p>Country: {props.country}</p>
   </div>
  );
 };

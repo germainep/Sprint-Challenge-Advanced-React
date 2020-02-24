@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 import PlayersCard from './PlayerCard'
 
+
 // create a component
 class Players extends Component {
  constructor() {
