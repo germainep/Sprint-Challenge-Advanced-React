@@ -1,6 +1,7 @@
-import React from 'react';
+import React from 'react'
 import ReactDOM from 'react-dom';
 import {render} from '@testing-library/react';
+import "@testing-library/jest-dom/extend-expect";
 import App from './App';
 
 it('renders without crashing', () => {
@@ -10,7 +11,8 @@ it('renders without crashing', () => {
 });
 
 it('displays a list of players with names', () => {
-  const {FindByText} = render(<App/>);
-  const names = findByText('Name');
-  expect(names).toBe(Array);
+  const {findAllByText, queryAllByText} = render(<App/>);
+  const names = findAllByText(/Name/i);
+  expect(names).resolves.toBeInTheDocument()
+  
 })
